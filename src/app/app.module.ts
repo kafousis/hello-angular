@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { EventsListComponent } from './events/events-list.component';
 
 // services are registered at the root module
 
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
 
   // register components, directives or pipes
   declarations: [
-    AppComponent
+    AppComponent,
+    EventsListComponent
   ],
 
   // register services
