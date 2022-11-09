@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 
-// This component is passing 'event1' to 'event-thumbnail' component
+// pass data from parent to child with [event]="event1"
+// this component is passing 'event1' to 'event-thumbnail' component
+
+// pass data from child to parent with (eventClick)="handleEventClicked($event)" 
+// when eventClick event is fired from 'event-thumbnail' call handleEventClicked($event)
 @Component({
     selector: 'events-list',
     template: `
     <div>
       <h1>Upcoming Angular Events</h1>
       <hr/>
-      <event-thumbnail [event]="event1"></event-thumbnail>
+      <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail>
     </div>
     `
   })
@@ -27,4 +31,8 @@ import { Component } from '@angular/core';
             country: 'USA'
         }
     }
+
+    handleEventClicked(data){
+      console.log('received: ', data)
+  }
   }
