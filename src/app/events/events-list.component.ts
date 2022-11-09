@@ -11,7 +11,11 @@ import { Component } from '@angular/core';
     <div>
       <h1>Upcoming Angular Events</h1>
       <hr/>
-      <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail>
+      <event-thumbnail #thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail>
+      <h3>Access property through template variable: {{thumbnail.thumbnailProperty}}</h3>
+      <button class="btn btn-primary" (click)="thumbnail.logFoo()">
+        Call method through template variable
+      </button>
     </div>
     `
   })

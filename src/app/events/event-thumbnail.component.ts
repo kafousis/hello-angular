@@ -33,4 +33,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     handleClickMe(){
         this.eventClick.emit(this.event.name)
     }
+
+    // public property that can be accessed from other components
+    thumbnailProperty: any = "This is my thumbnail property"
+
+    // public method that can be called from other components
+    logFoo() {
+        console.log('This is logFoo() method from EventThumbnail Component')
+    }
   }
