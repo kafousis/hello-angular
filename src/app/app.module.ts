@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
 
+import { NavBarComponent } from './nav/navbar.component';
+
 // services are registered at the root module
 
 @NgModule({
@@ -18,7 +20,8 @@ import { EventThumbnailComponent } from './events/event-thumbnail.component';
   declarations: [
     AppComponent,
     EventsListComponent,
-    EventThumbnailComponent
+    EventThumbnailComponent,
+    NavBarComponent
   ],
 
   // register services

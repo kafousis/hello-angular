@@ -17,7 +17,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
             Click me!
         </button>
     </div>
-    `
+    `,
+    styles: [
+        
+    ]
 })
 
   export class EventThumbnailComponent {
