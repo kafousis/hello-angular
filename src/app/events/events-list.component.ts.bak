@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 // Interpolation: {{thumbnail.thumbnailProperty}}
-// Property binding: [event]="event1"
+// Property binding-Expression: [event]="event1"
 // Event binding-Statement: (click)="thumbnail.logFoo()"
 
 // pass data from parent to child with [event]="event1"

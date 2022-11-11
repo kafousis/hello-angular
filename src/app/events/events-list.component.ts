@@ -4,9 +4,13 @@ import { Component } from '@angular/core';
     selector: 'events-list',
     template: `
         <div>
-        <h1>Upcoming Angular Events</h1>
-        <hr/>
-        <event-thumbnail *ngFor="let event of events" [event]="event"></event-thumbnail>
+			<h1>Upcoming Angular Events</h1>
+			<hr/>
+			<div class="row">
+				<div *ngFor="let event of events" class="col-md-5">
+					<event-thumbnail [event]="event"></event-thumbnail>
+				</div>
+			</div>
         </div>
     `
   })
@@ -99,11 +103,7 @@ export class EventsListComponent {
           time: '9:00 am',
           price: 950.00,
           imageUrl: '/assets/images/ng-nl.png',
-          location: {
-            address: 'The NG-NL Convention Center & Scuba Shop',
-            city: 'Amsterdam',
-            country: 'Netherlands'
-          },
+		  onlineUrl: "https://www.pluralsite.com",
           sessions: [
             {
               id: 1,
