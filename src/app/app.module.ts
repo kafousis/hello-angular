@@ -6,6 +6,7 @@ import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
 
 import { NavBarComponent } from './nav/navbar.component';
+import { EventService } from './events/shared/event.service';
 
 // services are registered at the root module
 
@@ -25,7 +26,9 @@ import { NavBarComponent } from './nav/navbar.component';
   ],
 
   // register services
-  providers: [],
+  providers: [
+    EventService
+  ],
   
   bootstrap: [AppComponent]
 })
