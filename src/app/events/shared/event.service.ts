@@ -1,9 +1,14 @@
 import { Injectable } from "@angular/core"
 
-//@Injectable()
+// @Injectable ensures that the compiler will generate the necessary metadata 
+// to create the class's dependencies when the class is injected
+@Injectable()
 export class EventService {
     getEvents() {
         return EVENTS
+    }
+    getEvent(id: number) {
+      return EVENTS.find(event => event.id === id)
     }
 }
 

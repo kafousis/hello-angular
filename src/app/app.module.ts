@@ -7,6 +7,7 @@ import { EventThumbnailComponent } from './events/event-thumbnail.component';
 
 import { NavBarComponent } from './nav/navbar.component';
 import { EventService } from './events/shared/event.service';
+import { EventDetailsComponent } from './events/event-details/event-details.component';
 
 // services are registered at the root module
 
@@ -22,6 +23,7 @@ import { EventService } from './events/shared/event.service';
     AppComponent,
     EventsListComponent,
     EventThumbnailComponent,
+    EventDetailsComponent,
     NavBarComponent
   ],
 
