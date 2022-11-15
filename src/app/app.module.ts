@@ -14,6 +14,7 @@ import { appRoutes } from './routes';
 import { CreateEventComponent } from './events/create-event.component';
 import { Error404Component } from './errors/404.component';
 import { EventRouterActivator } from './events/event-details/event-route-activator.service';
+import { EventListResolver } from './events/events-list-resolver.service';
 
 // services are registered at the root module
 
@@ -40,6 +41,7 @@ import { EventRouterActivator } from './events/event-details/event-route-activat
   providers: [
     EventService,
     EventRouterActivator,
+    EventListResolver, // pre-load data for component
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState

@@ -1,11 +1,23 @@
 import { Injectable } from "@angular/core"
+import { Subject } from "rxjs"
 
 // @Injectable ensures that the compiler will generate the necessary metadata 
 // to create the class's dependencies when the class is injected
 @Injectable()
 export class EventService {
     getEvents() {
-        return EVENTS
+
+        // use an rxjs observable to simulate asynchrony
+        let subject = new Subject()
+
+        // add data to observable after 100ms
+        setTimeout( () => { 
+          subject.next(EVENTS); 
+          subject.complete();
+        }, 100)
+
+        
+        return subject
     }
     getEvent(id: number) {
       return EVENTS.find(event => event.id === id)
