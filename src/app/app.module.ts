@@ -9,13 +9,17 @@ import { NavBarComponent } from './nav/navbar.component';
 import { EventService } from './events/shared/event.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
+
 // services are registered at the root module
 
 @NgModule({
 
   // import modules
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
 
   // register components, directives or pipes
