@@ -11,6 +11,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
+import { CreateEventComponent } from './events/create-event.component';
 
 // services are registered at the root module
 
@@ -28,7 +29,8 @@ import { appRoutes } from './routes';
     EventsListComponent,
     EventThumbnailComponent,
     EventDetailsComponent,
-    NavBarComponent
+    NavBarComponent,
+    CreateEventComponent
   ],
 
   // register services
